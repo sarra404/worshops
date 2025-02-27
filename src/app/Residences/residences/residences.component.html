@@ -19,10 +19,11 @@
             <span *ngSwitchCase="'en construction'" class="status-orange">{{ r.status }}</span>
             <span *ngSwitchDefault class="status-default">{{ r.status }}</span>
             <button class="btn-btn" [routerLink]="['/details',r.id]" >Voir details</button>
+            
           </p>
           <button (click)="toggleFavorite(r)" class="btn btn-light" [ngClass]="{'liked': isFavorite(r)}">
             ❤️ {{ isFavorite(r) ? 'Unlike' : 'Like' }}
-          </button> 
+          </button>
         </div>
       </div>
     </div>
